@@ -10,7 +10,7 @@ RUN set -xe;\
   apt-install git unzip php${PHPVER}-curl php${PHPVER}-zip php${PHPVER}-bcmath php${PHPVER}-intl php${PHPVER}-mbstring php${PHPVER}-xml composer
 RUN set -xe;\
   cd /var && rm -rf www &&\
-  git clone https://github.com/pixelfed/pixelfed.git www &&\
+  git clone https://github.com/harmtemolder/pixelfed.git www &&\
   cd www &&\
   curl -L https://github.com/hnrd/pixelfed/commit/${IP_PATCH}.patch | git apply &&\
   curl -L https://github.com/hnrd/pixelfed/commit/${DISCOVERY_PATCH}.patch | git apply &&\
